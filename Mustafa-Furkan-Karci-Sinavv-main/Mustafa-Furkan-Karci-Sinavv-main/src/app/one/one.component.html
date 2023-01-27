@@ -1,0 +1,69 @@
+<html>
+  <h1 class="head">ONE</h1>
+  <link rel="stylesheet" href="one.component.css" />
+
+      <h3 id="sidebar"><strong>SIDEBAR</strong></h3>
+ 
+  <div class="container">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+
+      <label for="nick">Nick Name</label>
+      <input
+        type="name"
+        class="form-control"
+        id="name"
+        formControlName="nick"
+      />
+      <br />
+
+      <button
+        class="btn btn-primary m-3"
+        [routerLink]="['/two']"
+        [disabled]="signupForm.invalid"
+        type="submit"
+      >
+        Submit
+      </button>
+      <input
+        [disabled]="signupForm === ''"
+        class="btn btn-primary"
+        type="reset"
+        id="reset"
+        name="reset"
+        value="Reset"
+      />
+    </form>
+
+    <div id="menu" class="content">
+      <ul>
+        <li><a href="one.component.html">Ana Sayfa</a></li>
+
+        <li><a href="">hakkımızda</a></li>
+
+        <li><a href="#urunler">Ürünler</a></li>
+
+        <li><a href="#referanslar">Referanslar</a></li>
+
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </div>
+
+ 
+    </div>
+   
+  <footer class="foot"><strong>AlphaStellar.io</strong></footer>
+  </html>
